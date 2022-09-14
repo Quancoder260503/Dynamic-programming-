@@ -7,13 +7,13 @@ typedef long long ll;
 pair<int,int>a[1005];
 pair<pair<int,int>,int>grval[1005];
 pair<int,int>tval[1005];
-vector<vector<ll>>dp(1005,vector<ll>(1005,0));
+vector<vector<ll>>dp(1005,vector<ll>(1005,-1));
 vector<vector<ll>>track(1005,vector<ll>(1005,-1));
 ll table[1005];
 int memo(int i,int j){
    if ( i<1 or j<1){
        return 0;
-   } if ( dp[i][j]>0){
+   } if ( dp[i][j]!=-1){
        return dp[i][j];
    }  else{
        int v=0;
